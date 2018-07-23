@@ -1,0 +1,3 @@
+﻿composer init
+composer require slim/slim "^3.0"
+composer require "twig/twig:^2.0"

@@ -1,0 +1,15 @@
+{
+    "name": "taxi/app",
+    "description": "taxi app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jan Specian",
+            "email": "jan.specian@google.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "twig/twig": "^2.0"
+    }
+}
