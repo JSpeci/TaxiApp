@@ -1,0 +1,43 @@
+﻿npm install -g create-react-app
+
+npm install -g parcel-bundler
+npm install -g typescript
+
+npm cache clear
+create-react-app taxi-ui --scripts-version=react-scripts-ts
+
+upravit tsconfig
+vyprazdnit src slozku
+npm init
+
+/*
+_app slozka
+tsconfig rootDir
+deDependencies!
+pridat node_modules do gitingnore
+
+parcel
+http://localhost:1234/dist/index.js
+
+visual studio
+right click na project - upravit projekt
+<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+
+cd C:\xampp\htdocs\TaxiDisp\src
+parcel watch --out-dir ./public/scripts ./taxi-ui/src/index.tsx
+
+*/
+
+npm install react
+npm install mobx
+npm install typescript
+npm install @types/react
+npm install react-dom
+npm install mobx-react
+npm install @types/react-dom
+
+;
+npm install --save-dev webpack
+
+
+npm run start

@@ -1,0 +1,19 @@
+sorting dochazky - podle pøichodu
+styling
+dochazka - i pritomni
+prichod dispecera form
+log stavu pri zmene stavu
+odtranit edit z dochazky
+pridat computed sloupec do dochazky - delka odpracovane doby
+
+objednavka - pridat, zrusit, editovat, stavSelect
+sloupce - adresa kam, prideleno, stav,
+
+485 353 429
+
+
+7,9 mezni termin splneni povinosti
+
+obhajoby prj obvykle 3-6.9
+
+1,9 182 dní

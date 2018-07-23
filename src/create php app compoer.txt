@@ -1,3 +1,16 @@
 ﻿composer init
 composer require slim/slim "^3.0"
 composer require "twig/twig:^2.0"
+
+#pridano
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+
+#pak
+composer dump-autoload
+
+#pro home
+composer require slim/twig-view
