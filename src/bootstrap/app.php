@@ -86,8 +86,6 @@ $container['LogStavuService'] = function($c) {
     return new LogStavuService($c);
 };
 
-
-
 $container['TypPraceUzivateleService'] = function($c) {
     return new TypPraceUzivateleService($c);
 };
