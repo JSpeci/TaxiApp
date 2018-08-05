@@ -21,6 +21,4 @@ export class DochazkaComponent extends React.Component<DochazkaComponentProps> {
 
     }
 
-
-
 }

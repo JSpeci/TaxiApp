@@ -42,6 +42,9 @@ vendor/*
 vendor/
 vendor
 
+#parcel_cache
+.cache/
+
 # TypeScript v1 declaration files
 typings/
 

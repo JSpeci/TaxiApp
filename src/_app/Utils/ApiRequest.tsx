@@ -7,8 +7,8 @@ export class ApiRequest {
     urlPrefix2: string;
 
     constructor() {
-        this.urlPrefix2 = "";     /*pro webhosting endora*/
-        this.urlPrefix = "/TaxiDisp/src";
+        this.urlPrefix = "";     /*pro webhosting endora*/
+        this.urlPrefix2 = "/TaxiApp/src";
     }
 
     public static formatTimeToMysqlFormat(date: Date): string {
@@ -132,7 +132,7 @@ export class ApiRequest {
     }
 
     getAllObjednavka(): Promise<Objednavka[]> {
-
+        console.log(this.urlPrefix2 + '/public/Dochazka');
         var myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");
 
@@ -141,7 +141,10 @@ export class ApiRequest {
             headers: myHeaders
         };
 
+        console.log(this.urlPrefix2 + '/public/Objednavka');
+
         return fetch(this.urlPrefix2 + '/public/Objednavka', myInit).then((response) => {
+
             return response.json();
         }).then((data) => {
             console.log(data);
@@ -150,6 +153,8 @@ export class ApiRequest {
     }
 
     getAllDochazka(): Promise<Dochazka[]> {
+
+        
 
         var myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");

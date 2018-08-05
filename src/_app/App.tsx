@@ -1,16 +1,8 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { observable, computed, action } from 'mobx';
-import { observer, inject } from 'mobx-react';
-import { Provider } from 'mobx-react';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
-import { Model } from './index';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-import { ApiRequest } from './Utils/ApiRequest';
 import { ObjednavkyComponent } from './Copmponents/ObjednavkyComponent';
-import { ObjednavkyModel } from './Models/ObjednavkyModel';
 import { MyMenu } from './Copmponents/MyMenu';
-import { UzivateleComponent } from './Copmponents/UzivateleComponent';
 import { DochazkaComponent } from './Copmponents/DochazkaComponent';
 import { PrehledComponent } from './Copmponents/PrehledComponent';
 
