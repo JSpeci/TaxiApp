@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import { ObjednavkyComponent } from './Copmponents/ObjednavkyComponent';
-import { MyMenu } from './Copmponents/MyMenu';
+import { MyHeader } from './Copmponents/MyHeader';
+import { MySidebar } from './Copmponents/MySidebar';
 import { DochazkaComponent } from './Copmponents/DochazkaComponent';
 import { PrehledComponent } from './Copmponents/PrehledComponent';
 
@@ -22,7 +23,8 @@ export default class App extends React.Component<AppProps> {
     return (
       <Router>
         <div className="App">
-          <MyMenu />
+          <MyHeader />
+          <MySidebar />
           <Route path='/Prehled' component={PrehledComponent} />
           <Route path='/Objednavky' component={ObjednavkyComponent} />
           <Route path='/Dochazka' component={DochazkaComponent} />
