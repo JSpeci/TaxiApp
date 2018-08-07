@@ -1,15 +1,11 @@
-/*import * as React from 'react';
+import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'mobx-react';
 import { ApiRequest } from './Utils/ApiRequest';
 import { ObjednavkyModel } from './Models/ObjednavkyModel';
 import { DochazkaModel } from './Models/DochazkaModel';
-*/
 
-console.log("adfaoufhiudhfmcdfcadfcdf");
-
-/*
 const apiRequest = new ApiRequest();
 
 ReactDOM.render(
@@ -20,4 +16,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root') as HTMLElement
 );
-*/

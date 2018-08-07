@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "taxiapp",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JSpeci/TaxiApp.git"
@@ -31,5 +28,36 @@
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
     "typescript": "^3.0.1"
+  },
+  "files": [
+    "BrowserRouter.js",
+    "HashRouter.js",
+    "Link.js",
+    "MemoryRouter.js",
+    "NavLink.js",
+    "Prompt.js",
+    "Redirect.js",
+    "Route.js",
+    "Router.js",
+    "StaticRouter.js",
+    "Switch.js",
+    "index.js",
+    "matchPath.js",
+    "withRouter.js",
+    "README.md",
+    "umd"
+  ],
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.0.2",
+    "@types/react": "^16.3.13",
+    "@types/react-dom": "^16.0.5",
+    "typescript": "^2.8.3"
   }
 }
