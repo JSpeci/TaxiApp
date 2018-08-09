@@ -9,8 +9,23 @@ pridat computed sloupec do dochazky - delka odpracovane doby
 objednavka - pridat, zrusit, editovat, stavSelect
 sloupce - adresa kam, prideleno, stav,
 
-485 353 429
+Master Detail rozvržení
+ObjednávkaList
+ObjednavkaDetail
 
+RidicList
+RidicDetail
+
+Fronta Ridicu
+FrontaObjednavek
+
+DocházkaList
+DocházkaDetail
+
+
+
+
+485 353 429
 
 7,9 mezni termin splneni povinosti
 

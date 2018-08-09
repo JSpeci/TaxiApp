@@ -9,9 +9,9 @@ export class MySidebar extends React.Component<MySidebarProps>{
         super(props);
     }
     public render() {
-        alert("adsfadsfadafadsf");
+        console.log("Rendering sidebar");
         return (
-            <h1>"My Sidebar component !!"</h1>
+            ""
         );
     }
 }

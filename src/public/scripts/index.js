@@ -29347,7 +29347,6 @@ var MyHeader = /** @class */function (_super) {
         return _super.call(this, props) || this;
     }
     MyHeader.prototype.render = function () {
-        alert("rendering header");
         return React.createElement("nav", { className: "navbar navbar-expand-lg navbar-light bg-light" }, React.createElement("button", { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarNavAltMarkup", "aria-controls": "navbarNavAltMarkup", "aria-expanded": "false", "aria-label": "Toggle navigation" }, React.createElement("span", { className: "navbar-toggler-icon" })), React.createElement("div", { className: "collapse navbar-collapse", id: "navbarNavAltMarkup" }, React.createElement("div", { className: "navbar-nav" }, React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link active", to: '/Prehled' }, "Fronta \u0158idi\u010D\u016F"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Objednavky' }, "Fronta Objedn\xE1vek"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Dochazka' }, "Doch\xE1zka"))));
     };
     return MyHeader;
@@ -29393,8 +29392,8 @@ var MySidebar = /** @class */function (_super) {
         return _super.call(this, props) || this;
     }
     MySidebar.prototype.render = function () {
-        alert("adsfadsfadafadsf");
-        return React.createElement("h1", null, "\"My Sidebar component !!\"");
+        console.log("Rendering sidebar");
+        return "";
     };
     return MySidebar;
 }(React.Component);
@@ -31522,7 +31521,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55080' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61045' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
