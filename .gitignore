@@ -46,6 +46,19 @@ vendor
 .cache/
 .cache
 
+#minified compiled js
+scripts
+scripts/
+public/scripts/
+/src/public/scripts/
+/src/public/scripts
+src/public/scripts/
+src/public/scripts
+
+#htacess
+.htaccess
+
+
 # TypeScript v1 declaration files
 typings/
 
