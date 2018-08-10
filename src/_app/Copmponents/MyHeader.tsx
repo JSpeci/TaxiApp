@@ -16,9 +16,14 @@ export class MyHeader extends React.Component<MyHeaderProps>{
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <Link className="nav-item nav-link active" to='/Prehled'>Fronta Řidičů</Link>
-                        <Link className="nav-item nav-link" to='/Objednavky'  >Fronta Objednávek</Link>
+                        <Link className="nav-item nav-link active" to='/FrontaRidicu'>Fronta Řidičů</Link>
+                        <Link className="nav-item nav-link" to='/FrontaObjednavek'  >Fronta Objednávek</Link>
                         <Link className="nav-item nav-link" to='/Dochazka' >Docházka</Link>
+                        <Link className="nav-item nav-link" to='/Lide' >Lidé</Link>
+                        <Link className="nav-item nav-link" to='/Objednavky' >Objednávky</Link>
+                        <Link className="nav-item nav-link" to='/Auta' >Auta</Link>
+                        <Link className="nav-item nav-link" to='/Log' >Log</Link>
+                        <Link className="nav-item nav-link" to='/Info' >Docházka</Link>
                     </div>
                 </div>
             </nav>

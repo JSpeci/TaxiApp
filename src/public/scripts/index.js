@@ -29347,7 +29347,7 @@ var MyHeader = /** @class */function (_super) {
         return _super.call(this, props) || this;
     }
     MyHeader.prototype.render = function () {
-        return React.createElement("nav", { className: "navbar navbar-expand-lg navbar-light bg-light" }, React.createElement("button", { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarNavAltMarkup", "aria-controls": "navbarNavAltMarkup", "aria-expanded": "false", "aria-label": "Toggle navigation" }, React.createElement("span", { className: "navbar-toggler-icon" })), React.createElement("div", { className: "collapse navbar-collapse", id: "navbarNavAltMarkup" }, React.createElement("div", { className: "navbar-nav" }, React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link active", to: '/Prehled' }, "Fronta \u0158idi\u010D\u016F"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Objednavky' }, "Fronta Objedn\xE1vek"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Dochazka' }, "Doch\xE1zka"))));
+        return React.createElement("nav", { className: "navbar navbar-expand-lg navbar-light bg-light" }, React.createElement("button", { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarNavAltMarkup", "aria-controls": "navbarNavAltMarkup", "aria-expanded": "false", "aria-label": "Toggle navigation" }, React.createElement("span", { className: "navbar-toggler-icon" })), React.createElement("div", { className: "collapse navbar-collapse", id: "navbarNavAltMarkup" }, React.createElement("div", { className: "navbar-nav" }, React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link active", to: '/FrontaRidicu' }, "Fronta \u0158idi\u010D\u016F"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/FrontaObjednavek' }, "Fronta Objedn\xE1vek"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Dochazka' }, "Doch\xE1zka"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Lide' }, "Lid\xE9"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Objednavky' }, "Objedn\xE1vky"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Auta' }, "Auta"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Log' }, "Log"), React.createElement(_reactRouterDom.Link, { className: "nav-item nav-link", to: '/Info' }, "Doch\xE1zka"))));
     };
     return MyHeader;
 }(React.Component);
@@ -31521,7 +31521,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61045' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61405' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
