@@ -30145,7 +30145,7 @@ var App = /** @class */function (_super) {
         return _super.call(this, props) || this;
     }
     App.prototype.render = function () {
-        return React.createElement(_reactRouterDom.BrowserRouter, null, React.createElement("div", { className: "App" }, React.createElement(_MyHeader.MyHeader, null), React.createElement(_MySidebar.MySidebar, null), React.createElement(_reactRouterDom.Route, { path: '/Prehled', component: _PrehledComponent.PrehledComponent }), React.createElement(_reactRouterDom.Route, { path: '/Objednavky', component: _ObjednavkyComponent.ObjednavkyComponent }), React.createElement(_reactRouterDom.Route, { path: '/Dochazka', component: _DochazkaComponent.DochazkaComponent })));
+        return React.createElement(_reactRouterDom.BrowserRouter, null, React.createElement("div", { className: "App" }, React.createElement(_MyHeader.MyHeader, null), React.createElement(_MySidebar.MySidebar, null), React.createElement(_reactRouterDom.Route, { path: '/FrontaRidicu', component: _PrehledComponent.PrehledComponent }), React.createElement(_reactRouterDom.Route, { path: '/FrontaObjednavek', component: _ObjednavkyComponent.ObjednavkyComponent }), React.createElement(_reactRouterDom.Route, { path: '/Dochazka', component: _DochazkaComponent.DochazkaComponent })));
     };
     return App;
 }(React.Component);

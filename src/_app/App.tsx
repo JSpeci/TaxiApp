@@ -25,8 +25,8 @@ export default class App extends React.Component<AppProps> {
         <div className="App">
           <MyHeader />
           <MySidebar />
-          <Route path='/Prehled' component={PrehledComponent} />
-          <Route path='/Objednavky' component={ObjednavkyComponent} />
+          <Route path='/FrontaRidicu' component={PrehledComponent} />
+          <Route path='/FrontaObjednavek' component={ObjednavkyComponent} />
           <Route path='/Dochazka' component={DochazkaComponent} />
         </div>
       </Router>
