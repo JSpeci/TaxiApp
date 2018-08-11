@@ -2,8 +2,7 @@ import * as React from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import { ObjednavkyComponent } from './Copmponents/ObjednavkyComponent';
-import { MyHeader } from './Copmponents/MyHeader';
-import { MySidebar } from './Copmponents/MySidebar';
+import { MyHeader } from './MyHeader/MyHeader';
 import { DochazkaComponent } from './Copmponents/DochazkaComponent';
 import { PrehledComponent } from './Copmponents/PrehledComponent';
 
@@ -24,7 +23,6 @@ export default class App extends React.Component<AppProps> {
       <Router>
         <div className="App">
           <MyHeader />
-          <MySidebar />
           <Route path='/FrontaRidicu' component={PrehledComponent} />
           <Route path='/FrontaObjednavek' component={ObjednavkyComponent} />
           <Route path='/Dochazka' component={DochazkaComponent} />
