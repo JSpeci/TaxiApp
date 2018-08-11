@@ -54,6 +54,8 @@ public/scripts/
 /src/public/scripts
 src/public/scripts/
 src/public/scripts
+*.js
+*.map
 
 #htacess
 .htaccess
