@@ -7,8 +7,8 @@ export class ApiRequest {
     urlPrefix2: string;
 
     constructor() {
-        this.urlPrefix = "";     /*pro webhosting endora*/
-        this.urlPrefix2 = "/TaxiApp/src";
+        this.urlPrefix2 = "";     /*pro webhosting endora*/
+        this.urlPrefix = "/TaxiApp/src";
     }
 
     public static formatTimeToMysqlFormat(date: Date): string {
