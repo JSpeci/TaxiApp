@@ -27,6 +27,7 @@ $app->group('/Uzivatele', function() {
 $app->group('/Dochazka', function() {
     $this->get('/{id}', DochazkaController::class . ':getDochazkaDetailById');
     $this->get('', DochazkaController::class . ':getAllDochazka');
+    $this->get('/DaysAgo/{days_ago}', DochazkaController::class . ':getAllDochazkaDaysAgo');
     $this->post('', DochazkaController::class . ':saveNewDochazka');
     $this->map(['PUT', 'PATCH'], '/{id}', DochazkaController::class . ':updateDochazka');
     $this->delete('/{id}', DochazkaController::class . ':deleteDochazka');

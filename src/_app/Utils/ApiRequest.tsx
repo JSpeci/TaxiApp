@@ -152,9 +152,8 @@ export class ApiRequest {
         });
     }
 
+    //deprecated
     getAllDochazka(): Promise<Dochazka[]> {
-
-        
 
         var myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");
@@ -165,6 +164,24 @@ export class ApiRequest {
         };
 
         return fetch(this.urlPrefix2 + '/public/Dochazka', myInit).then((response) => {
+            return response.json();
+        }).then((data) => {
+            console.log(data);
+            return data;
+        });
+    }
+
+    getAllDochazkaUntilDate(untilDate: Date): Promise<Dochazka[]> {
+
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "application/json");
+
+        var myInit = {
+            method: 'GET',
+            headers: myHeaders
+        };
+
+        return fetch(this.urlPrefix2 + '/public/Dochazka/' + untilDate, myInit).then((response) => {
             return response.json();
         }).then((data) => {
             console.log(data);

@@ -37,6 +37,30 @@ class DochazkaService extends AService {
         return $dochazky;
     }
 
+    public function getAllDochazkaDaysAgo($days_ago) {
+
+        //brute validace
+        if($days_ago < 0)
+        {
+            $days_ago = 1;
+        }
+
+        $sql = "
+        SELECT * 
+        FROM Dochazka
+        WHERE Prichod >= (DATE_SUB(NOW(), INTERVAL ? day))";
+        $stmt = $this->container->db->prepare($sql);
+        $stmt->execute([$days_ago]);
+        $results = $stmt->fetchAll();
+
+        $dochazky = [];
+        foreach ($results as $obj) {
+            $d = $this->assemblyDTO($this->getDochazkaById($obj['idDochazka']));
+            $dochazky[] = $d;
+        }
+        return $dochazky;
+    }
+
     public function getDochazkaDetailById($id) {
         $sql = "        
             SELECT * 

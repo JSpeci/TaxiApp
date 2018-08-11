@@ -31,6 +31,18 @@ class DochazkaController extends ApiController {
     }
 
     /**
+     * Vsechny od UTC stamp
+     */
+    public function getAllDochazkaDaysAgo(Request $request, Response $response, array $args) {
+
+        $days_ago = $args['days_ago'];
+        $dochazky = $this->dochazka_service->getAllDochazkaDaysAgo($days_ago);
+        
+        $response->getBody()->write(json_encode($dochazky, JSON_UNESCAPED_UNICODE));
+        return $response;
+    }
+
+    /**
      * Dochazka podle zadaneho id
      */
     public function getDochazkaDetailById(Request $request, Response $response, array $args) {

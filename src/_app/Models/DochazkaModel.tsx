@@ -12,8 +12,7 @@ export class DochazkaModel {
     apiRequester: ApiRequest;
     @observable loading: boolean;
 
-    //otestovat jestli funguje private @oibservable
-    @observable dochazky: Dochazka[];
+    @observable private dochazky: Dochazka[];
 
     @observable dochazkyModels: DochazkaRowModel[];
 
@@ -106,10 +105,15 @@ export class DochazkaModel {
 
     async load() {
         this.loading = true;
-        await this.apiRequester.getAllDochazka().then(data => { this.dochazky = data });
+        console.log("Loading Dochazka");
+        //await this.apiRequester.getAllDochazka().then(data => { this.dochazky = data });
+        let date: Date = Date.now();
+        await this.apiRequester.getAllDochazkaUntilDate(date).then(data => { this.dochazky = data });
+        console.log(date);
         this.DochazkaAll.forEach(d => {
             this.dochazkyModels.push(new DochazkaRowModel(d, this.stavModel, this.apiRequester));
         });
         this.loading = false;
+        console.log("Loading Dochazka Fin! ");
     }
 }
