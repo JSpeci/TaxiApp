@@ -107,9 +107,9 @@ export class DochazkaModel {
         this.loading = true;
         console.log("Loading Dochazka");
         //await this.apiRequester.getAllDochazka().then(data => { this.dochazky = data });
-        let date: Date = Date.now();
-        await this.apiRequester.getAllDochazkaUntilDate(date).then(data => { this.dochazky = data });
-        console.log(date);
+        const daysAgo = 2
+        await this.apiRequester.getAllDochazkaDaysAgo(daysAgo).then(data => { this.dochazky = data });
+        console.log(daysAgo);
         this.DochazkaAll.forEach(d => {
             this.dochazkyModels.push(new DochazkaRowModel(d, this.stavModel, this.apiRequester));
         });

@@ -171,7 +171,7 @@ export class ApiRequest {
         });
     }
 
-    getAllDochazkaUntilDate(untilDate: Date): Promise<Dochazka[]> {
+    getAllDochazkaDaysAgo(daysAgo: number): Promise<Dochazka[]> {
 
         var myHeaders = new Headers();
         myHeaders.append("Accept", "application/json");
@@ -181,7 +181,7 @@ export class ApiRequest {
             headers: myHeaders
         };
 
-        return fetch(this.urlPrefix2 + '/public/Dochazka/' + untilDate, myInit).then((response) => {
+        return fetch(this.urlPrefix2 + '/public/Dochazka/DaysAgo/' + daysAgo, myInit).then((response) => {
             return response.json();
         }).then((data) => {
             console.log(data);
