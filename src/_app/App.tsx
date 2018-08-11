@@ -3,8 +3,8 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import { ObjednavkyComponent } from './Copmponents/ObjednavkyComponent';
 import { MyHeader } from './MyHeader/MyHeader';
-import { DochazkaComponent } from './Copmponents/DochazkaComponent';
 import { PrehledComponent } from './Copmponents/PrehledComponent';
+import { DochazkaList } from './Dochazka/DochazkaList';
 
 
 
@@ -25,7 +25,7 @@ export default class App extends React.Component<AppProps> {
           <MyHeader />
           <Route path='/FrontaRidicu' component={PrehledComponent} />
           <Route path='/FrontaObjednavek' component={ObjednavkyComponent} />
-          <Route path='/Dochazka' component={DochazkaComponent} />
+          <Route path='/Dochazka' component={DochazkaList} />
         </div>
       </Router>
     );

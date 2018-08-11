@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { TypPraceSelectComponent } from './TypPraceSelectComponent';
+import { TypPraceSelectComponent } from '../Copmponents/TypPraceSelectComponent';
 import { TypPraceUzivateleModel } from '../Models/TypPraceUzivateleModel';
 import { UzivateleModel } from '../Models/UzivateleModel';
-import { UzivatelSelectComponent } from './UzivatelSelectComponent';
+import { UzivatelSelectComponent } from '../Copmponents/UzivatelSelectComponent';
 import { action } from 'mobx';
-import { AutoSelectComponent } from './AutoSelectComponent';
+import { AutoSelectComponent } from '../Copmponents/AutoSelectComponent';
 import { AutoModel } from '../Models/AutoModel';
 
 export interface NewDochazkaComponentProps {

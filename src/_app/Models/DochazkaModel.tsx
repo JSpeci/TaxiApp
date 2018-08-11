@@ -1,7 +1,7 @@
 import { ApiRequest } from "../Utils/ApiRequest";
 import { observable, computed, action } from "mobx";
 import { Uzivatel, Dochazka, DochazkaDTO } from "../Utils/Interfaces";
-import { DochazkaRowModel } from "../Models/DochazkaRowModel";
+import { DochazkaRowModel } from "./DochazkaRowModel";
 import { StavUzivateleModel } from "./StavUzivateleModel";
 import { TypPraceUzivateleModel } from "./TypPraceUzivateleModel";
 import { UzivateleModel } from "./UzivateleModel";
@@ -24,6 +24,7 @@ export class DochazkaModel {
 
     @observable autoModel: AutoModel;
 
+    @observable pocetDniDoMinulosti: number = 2;
 
     @computed get DochazkaAll(): Dochazka[] {
         return (this.dochazky == null) ? [] : this.dochazky;
@@ -31,11 +32,10 @@ export class DochazkaModel {
 
     @computed get DochazkaRowModelsAll(): DochazkaRowModel[] {
 
-        if (this.dochazkyModels == null)
-        {
+        if (this.dochazkyModels == null) {
             return [];
-        } 
-        else{
+        }
+        else {
             let sorted1 = this.dochazkyModels.sort(a => {
                 //chci mit navrchu ty přítomné v práci
                 if (a.jeVPraci) {
@@ -43,11 +43,10 @@ export class DochazkaModel {
                 }
                 else return 1;
             });
-            let sorted2 = sorted1.sort((a,b) => {
+            let sorted2 = sorted1.sort((a, b) => {
                 let aDate = new Date(a.dochazka.prichod);
                 let bDate = new Date(b.dochazka.prichod);
-                if (aDate > bDate)
-                {
+                if (aDate > bDate) {
                     return -1;
                 }
                 else return 1;
@@ -102,18 +101,22 @@ export class DochazkaModel {
     }
 
 
+    @action.bound
+    async incrementPocetDniDoMinulosti() {
+        this.pocetDniDoMinulosti = this.pocetDniDoMinulosti + 1;
+        await this.load();
+    }
 
     async load() {
         this.loading = true;
-        console.log("Loading Dochazka");
-        //await this.apiRequester.getAllDochazka().then(data => { this.dochazky = data });
-        const daysAgo = 2
-        await this.apiRequester.getAllDochazkaDaysAgo(daysAgo).then(data => { this.dochazky = data });
-        console.log(daysAgo);
+        await this.apiRequester.getAllDochazkaDaysAgo(this.pocetDniDoMinulosti).then(data => { this.dochazky = data });
+        this.syncModels();
+        this.loading = false;
+    }
+
+    private syncModels(){
         this.DochazkaAll.forEach(d => {
             this.dochazkyModels.push(new DochazkaRowModel(d, this.stavModel, this.apiRequester));
         });
-        this.loading = false;
-        console.log("Loading Dochazka Fin! ");
     }
 }

@@ -48,7 +48,7 @@ class DochazkaService extends AService {
         $sql = "
         SELECT * 
         FROM Dochazka
-        WHERE Prichod >= (DATE_SUB(NOW(), INTERVAL ? day))";
+        WHERE Prichod >= (DATE_SUB(NOW(), INTERVAL ? day)) OR Odchod is null";
         $stmt = $this->container->db->prepare($sql);
         $stmt->execute([$days_ago]);
         $results = $stmt->fetchAll();
