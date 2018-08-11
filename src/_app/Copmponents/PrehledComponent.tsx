@@ -21,10 +21,12 @@ export class PrehledComponent extends React.Component<PrehledComponentProps> {
         console.log(this.props.dochazkaStore);
 
         return (
-            <table key={1234} className="table">
-                <thead>{this.makeTableHeader()}</thead>
-                <tbody>{this.makeTableRows()}</tbody>
-            </table>
+            <div className="container">
+                <table key={1234} className="table block">
+                    <thead>{this.makeTableHeader()}</thead>
+                    <tbody>{this.makeTableRows()}</tbody>
+                </table>
+            </div>
         );
     }
 

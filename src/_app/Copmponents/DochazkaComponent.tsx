@@ -21,19 +21,21 @@ export class DochazkaComponent extends React.Component<DochazkaComponentProps> {
         console.log(this.props.dochazkaStore);
 
         return (
-            <div className="card">
-                <div className="card-header">
-                    <NewDochazkaComponent
-                        typPraceModel={this.props.dochazkaStore.typPraceModel}
-                        uzivateleModel={this.props.dochazkaStore.uzivateleModel}
-                        autoModel={this.props.dochazkaStore.autoModel}
-                        prichodRidice={this.props.dochazkaStore.prichodOsoby} />
-                </div>
-                <div className="card-body">
-                    < table key={1234} className="table" >
-                        <thead>{this.makeTableHeader()}</thead>
-                        <tbody>{this.makeTableRows()}</tbody>
-                    </table >
+            <div className="container">
+                <div className="card">
+                    <div className="card-header">
+                        <NewDochazkaComponent
+                            typPraceModel={this.props.dochazkaStore.typPraceModel}
+                            uzivateleModel={this.props.dochazkaStore.uzivateleModel}
+                            autoModel={this.props.dochazkaStore.autoModel}
+                            prichodRidice={this.props.dochazkaStore.prichodOsoby} />
+                    </div>
+                    <div className="card-body">
+                        < table key={1234} className="table" >
+                            <thead>{this.makeTableHeader()}</thead>
+                            <tbody>{this.makeTableRows()}</tbody>
+                        </table >
+                    </div>
                 </div>
             </div>
 

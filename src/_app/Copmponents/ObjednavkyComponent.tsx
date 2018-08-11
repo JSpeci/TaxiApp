@@ -26,9 +26,11 @@ export class ObjednavkyComponent extends React.Component<ObjednavkyProps> {
         });
 
         return (
-            <ul key={1234} className="list-group">
-                {objednavky}
-            </ul>
+            <div className="container">
+                <ul key={1234} className="list-group">
+                    {objednavky}
+                </ul>
+            </div>
         );
     }
 }

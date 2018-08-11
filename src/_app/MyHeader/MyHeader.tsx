@@ -50,14 +50,13 @@ export class MyHeader extends React.Component<MyHeaderProps>{
         let key: number = 0;
         
         return (
-            <nav className="navbar navbar-inverse navbar-fixed-top">
+            <nav className="navbar-fixed navbar-inverse ">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="">Taxi Dispečink</a>
+                        <a className="navbar-brand" href="http://localhost/TaxiApp/src/public/">Taxi Dispečink</a>
                     </div>
                     <ul className="nav navbar-nav">
                         {
-                            
                             this.links.map((link) => {
                                 return(<li key={key++} className="active"><Link className="nav-item nav-link active" to={link.to}>{link.label}</Link></li>);
                             })
