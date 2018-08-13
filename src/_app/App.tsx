@@ -5,6 +5,7 @@ import { ObjednavkyComponent } from './Copmponents/ObjednavkyComponent';
 import { MyHeader } from './MyHeader/MyHeader';
 import { PrehledComponent } from './Copmponents/PrehledComponent';
 import { DochazkaList } from './Dochazka/DochazkaList';
+import { DochazkaLoaderComponent } from './Dochazka/DochazkaLoaderComponent';
 
 
 
@@ -25,7 +26,7 @@ export default class App extends React.Component<AppProps> {
           <MyHeader />
           <Route path='/FrontaRidicu' component={PrehledComponent} />
           <Route path='/FrontaObjednavek' component={ObjednavkyComponent} />
-          <Route path='/Dochazka' component={DochazkaList} />
+          <Route path='/Dochazka' component={DochazkaLoaderComponent} />
         </div>
       </Router>
     );

@@ -72,7 +72,7 @@ export class DochazkaModel {
         this.uzivateleModel = new UzivateleModel(this.apiRequester);
         this.autoModel = new AutoModel(this.apiRequester);
 
-        this.load();
+        //this.load();
     }
 
 
@@ -116,7 +116,7 @@ export class DochazkaModel {
 
     private syncModels(){
         this.DochazkaAll.forEach(d => {
-            this.dochazkyModels.push(new DochazkaRowModel(d, this.stavModel, this.apiRequester));
+            
         });
     }
 }
