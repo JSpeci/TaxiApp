@@ -26,6 +26,12 @@ export class DochazkaModel {
 
     @observable pocetDniDoMinulosti: number = 2;
 
+    @observable loadedYet: boolean = false;
+
+    @computed get ShouldReload() : boolean {
+        return !this.loadedYet;
+    }
+
     @computed get DochazkaAll(): Dochazka[] {
         return (this.dochazky == null) ? [] : this.dochazky;
     }
@@ -71,7 +77,7 @@ export class DochazkaModel {
         this.typPraceModel = new TypPraceUzivateleModel(this.apiRequester);
         this.uzivateleModel = new UzivateleModel(this.apiRequester);
         this.autoModel = new AutoModel(this.apiRequester);
-
+        this.loadedYet = false;
         //this.load();
     }
 
@@ -103,20 +109,26 @@ export class DochazkaModel {
 
     @action.bound
     async incrementPocetDniDoMinulosti() {
+        this.loadedYet = false;
+        this.loading = true;
         this.pocetDniDoMinulosti = this.pocetDniDoMinulosti + 1;
         await this.load();
+        this.loading = false;
     }
 
     async load() {
         this.loading = true;
-        await this.apiRequester.getAllDochazkaDaysAgo(this.pocetDniDoMinulosti).then(data => { this.dochazky = data });
-        this.syncModels();
+        if (this.ShouldReload) {
+            await this.apiRequester.getAllDochazkaDaysAgo(this.pocetDniDoMinulosti).then(data => { this.dochazky = data });
+            this.syncModels();
+            this.loadedYet = true;
+        }
         this.loading = false;
     }
 
-    private syncModels(){
+    private syncModels() {
         this.DochazkaAll.forEach(d => {
-            
+            this.dochazkyModels.push(new DochazkaRowModel(d, this.stavModel, this.apiRequester));
         });
     }
 }
