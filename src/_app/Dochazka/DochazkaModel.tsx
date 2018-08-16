@@ -1,11 +1,11 @@
 import { ApiRequest } from "../Utils/ApiRequest";
 import { observable, computed, action } from "mobx";
 import { Uzivatel, Dochazka, DochazkaDTO } from "../Utils/Interfaces";
-import { DochazkaRowModel } from "./DochazkaRowModel";
-import { StavUzivateleModel } from "./StavUzivateleModel";
-import { TypPraceUzivateleModel } from "./TypPraceUzivateleModel";
-import { UzivateleModel } from "./UzivateleModel";
-import { AutoModel } from "./AutoModel";
+import { DochazkaRowModel } from "../Models/DochazkaRowModel";
+import { StavUzivateleModel } from "../Models/StavUzivateleModel";
+import { TypPraceUzivateleModel } from "../Models/TypPraceUzivateleModel";
+import { UzivateleModel } from "../Models/UzivateleModel";
+import { AutoModel } from "../Models/AutoModel";
 
 export class DochazkaModel {
 
@@ -116,6 +116,15 @@ export class DochazkaModel {
         this.loading = false;
     }
 
+    @action.bound
+    async changePocetDniDoMinulost(dny: number) {
+        this.loadedYet = false;
+        this.loading = true;
+        this.pocetDniDoMinulosti = dny;
+        await this.load();
+        this.loading = false;
+    }
+
     async load() {
         this.loading = true;
         if (this.ShouldReload) {
@@ -127,6 +136,7 @@ export class DochazkaModel {
     }
 
     private syncModels() {
+        this.dochazkyModels = [];
         this.DochazkaAll.forEach(d => {
             this.dochazkyModels.push(new DochazkaRowModel(d, this.stavModel, this.apiRequester));
         });

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { observer, inject } from 'mobx-react';
-import { DochazkaModel } from '../Models/DochazkaModel';
+import { DochazkaModel } from './DochazkaModel';
 import { DochazkaRowComponent } from './DochazkaRowComponent';
 import { NewDochazkaComponent } from './NewDochazkaComponent';
+import { DnyDoMinulostiComponent } from '../Copmponents/DnyDoMinulostiComponent';
 
 export interface DochazkaListProps {
     dochazkaStore: DochazkaModel;
@@ -29,6 +30,7 @@ export class DochazkaList extends React.Component<DochazkaListProps> {
                             uzivateleModel={this.props.dochazkaStore.uzivateleModel}
                             autoModel={this.props.dochazkaStore.autoModel}
                             prichodRidice={this.props.dochazkaStore.prichodOsoby} />
+                        <DnyDoMinulostiComponent days={this.props.dochazkaStore.pocetDniDoMinulosti} daysToPastChnaged={this.props.dochazkaStore.changePocetDniDoMinulost} />
                     </div>
                     <div className="card-body">
                         < table key={1234} className="table" >

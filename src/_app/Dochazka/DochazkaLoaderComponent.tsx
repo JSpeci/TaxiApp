@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { observer, inject } from 'mobx-react';
-import { DochazkaModel } from '../Models/DochazkaModel';
+import { DochazkaModel } from './DochazkaModel';
 import { DochazkaList } from './DochazkaList';
+import Loading from 'react-loading-components';
 
 export interface DochazkaComponentProps {
     dochazkaStore: DochazkaModel;
@@ -18,7 +19,9 @@ export class DochazkaLoaderComponent extends React.Component<DochazkaComponentPr
     public render() {
         if (this.props.dochazkaStore.loading) {
             //console.log("LOADING projects");
-            return (<div>should render loading gif</div>);
+            return (
+                <Loading className="" type='ball_triangle' width={100} height={100} fill='#f44242' />
+            );
         }
         else {
             return (

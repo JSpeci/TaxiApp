@@ -6,6 +6,9 @@ npm install -g typescript
 npm cache clear
 create-react-app taxi-ui --scripts-version=react-scripts-ts
 
+npm install react-loading-components
+npm install @types/react-loading-components
+
 upravit tsconfig
 vyprazdnit src slozku
 npm init

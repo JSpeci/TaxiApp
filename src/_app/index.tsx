@@ -4,7 +4,7 @@ import App from './App';
 import { Provider } from 'mobx-react';
 import { ApiRequest } from './Utils/ApiRequest';
 import { ObjednavkyModel } from './Models/ObjednavkyModel';
-import { DochazkaModel } from './Models/DochazkaModel';
+import { DochazkaModel } from './Dochazka/DochazkaModel';
 
 const apiRequest = new ApiRequest();
 

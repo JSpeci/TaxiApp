@@ -1,8 +1,6 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { observer, inject } from 'mobx-react';
-import { DochazkaModel } from '../Models/DochazkaModel';
-import { DochazkaRowComponent } from './DochazkaRowComponent';
+import { DochazkaModel } from '../Dochazka/DochazkaModel';
 import { PrehledRowComponent } from './PrehledRowComponent';
 
 export interface PrehledComponentProps {
