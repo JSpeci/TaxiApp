@@ -27,8 +27,3 @@ body {
 .float_right{
   float: right !important;
 }
-
-.width60px{
-  /*for input DaysToPAst inline-form*/
-  width: 63px;
-}
