@@ -7,3 +7,15 @@ body {
 .container{
   margin-top: 10px;
 }
+
+.loader_component{
+  max-width: 1000px;
+}
+
+.center_loader
+{
+  position: relative;
+  margin-top: 10%;
+  width: 110px;
+  margin-left: 45%;
+}

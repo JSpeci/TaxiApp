@@ -2,7 +2,7 @@ import * as React from 'react';
 import { observer, inject } from 'mobx-react';
 import { DochazkaModel } from './DochazkaModel';
 import { DochazkaList } from './DochazkaList';
-import Loading from 'react-loading-components';
+import { LoadingProgressBarComponent } from '../Copmponents/LoadingProgressBarComponent';
 
 export interface DochazkaComponentProps {
     dochazkaStore: DochazkaModel;
@@ -20,7 +20,7 @@ export class DochazkaLoaderComponent extends React.Component<DochazkaComponentPr
         if (this.props.dochazkaStore.loading) {
             //console.log("LOADING projects");
             return (
-                <Loading className="" type='ball_triangle' width={100} height={100} fill='#f44242' />
+                <LoadingProgressBarComponent height={80} width={80} type="spinning_circles" />
             );
         }
         else {
@@ -28,7 +28,6 @@ export class DochazkaLoaderComponent extends React.Component<DochazkaComponentPr
                 <DochazkaList dochazkaStore={this.props.dochazkaStore} />
             );
         }
-
     }
 
     public componentDidMount() {

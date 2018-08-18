@@ -27,7 +27,7 @@ right click na project - upravit projekt
 <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
 
 cd C:\xampp\htdocs\TaxiApp\src
-parcel watch --out-dir ./public/scripts ./taxi-ui/index.tsx
+parcel watch --out-dir ./public/scripts ./_app/index.tsx
 
 */
 
