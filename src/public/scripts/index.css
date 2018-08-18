@@ -19,3 +19,16 @@ body {
   width: 110px;
   margin-left: 45%;
 }
+
+.float_left{
+  float: left !important;
+}
+
+.float_right{
+  float: right !important;
+}
+
+.width60px{
+  /*for input DaysToPAst inline-form*/
+  width: 63px;
+}

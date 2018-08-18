@@ -29,18 +29,20 @@ export class NewDochazkaComponent extends React.Component<NewDochazkaComponentPr
 
     public render() {
         return (
-            <form className="form-inline">
-                <div className="form-group mb-2">
-                    <UzivatelSelectComponent uzivatele={this.props.uzivateleModel.uzivatele} selected={this.uzivatelSelected} />
-                </div>
-                <div className="form-group mx-sm-3 mb-2">
-                    <TypPraceSelectComponent typyPrace={this.props.typPraceModel.array} selected={this.typPraceSelected} />
-                </div>
-                <div className="form-group mx-sm-3 mb-2">
-                    <AutoSelectComponent auta={this.props.autoModel.auta} selected={this.autoSelected} />
-                </div>
-                <button type="button" className="btn btn-primary mb-2" onClick={this.prichodClicked}>Příchod</button>
-            </form>
+            <div className="">
+                <form className="form-inline float_left">
+                    <div className="form-group mb-2">
+                        <UzivatelSelectComponent uzivatele={this.props.uzivateleModel.uzivatele} selected={this.uzivatelSelected} />
+                    </div>
+                    <div className="form-group mx-sm-3 mb-2">
+                        <TypPraceSelectComponent typyPrace={this.props.typPraceModel.array} selected={this.typPraceSelected} />
+                    </div>
+                    <div className="form-group mx-sm-3 mb-2">
+                        <AutoSelectComponent auta={this.props.autoModel.auta} selected={this.autoSelected} />
+                    </div>
+                    <button type="button" className="btn btn-primary mb-2" onClick={this.prichodClicked}>Příchod</button>
+                </form>
+            </div>
         );
     }
 
@@ -61,7 +63,7 @@ export class NewDochazkaComponent extends React.Component<NewDochazkaComponentPr
 
     @action.bound
     prichodClicked() {
-        this.props.prichodRidice(this.uzivatelId, this.typPraceId,  this.autoId);
+        this.props.prichodRidice(this.uzivatelId, this.typPraceId, this.autoId);
         console.log("Prichod", this.typPraceId, this.uzivatelId, this.autoId);
     }
 }

@@ -19,12 +19,11 @@ export class DnyDoMinulostiComponent extends React.Component<DnyDoMinulostiCompo
     public render() {
         return (
 
-            <form className="form">
+            <form className="form-inline float_right">
                 <div className="form-group mx-sm-3 mb-2">
-                    <label>Počet dní do minulosti: </label>
-                    <input className="form-control col-sm-5" defaultValue={this.pocetDni.toString()} type="text" onChange={(e) => this.pocetDniChanged(e.target.value)} />
+                    <input className="form-control mx-sm-2 mb-2" defaultValue={this.pocetDni.toString()} type="number" min="1" max="365" onChange={(e) => this.pocetDniChanged(e.target.value)} />
                 </div>
-                <button type="button" className="btn btn-primary mb-2" onClick={(e) => this.pocetDniClicked()}>Nastav</button>
+                <button type="button" className="btn btn-primary mb-2" onClick={(e) => this.pocetDniClicked()}>Dnů nazpět</button>
             </form>
         );
     }
@@ -32,6 +31,11 @@ export class DnyDoMinulostiComponent extends React.Component<DnyDoMinulostiCompo
     pocetDniChanged(input: string) {
         //parse to number
         this.pocetDni = Number(input);
+    }
+
+    // TO DO
+    validateInput(input: string) : boolean {
+        return false;
     }
 
     pocetDniClicked() {
