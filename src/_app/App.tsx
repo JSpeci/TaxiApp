@@ -4,7 +4,6 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { ObjednavkyComponent } from './Copmponents/ObjednavkyComponent';
 import { MyHeader } from './MyHeader/MyHeader';
 import { PrehledComponent } from './Copmponents/PrehledComponent';
-import { DochazkaList } from './Dochazka/DochazkaList';
 import { DochazkaLoaderComponent } from './Dochazka/DochazkaLoaderComponent';
 
 
