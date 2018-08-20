@@ -14,6 +14,13 @@ export class DochazkaRowComponent extends React.Component<DochazkaRowComponentPr
         super(props);
     }
 
+    public formatDateTime(input: string): string {
+
+
+
+        return "";
+    }
+
     public render() {
 
         return (
@@ -31,7 +38,7 @@ export class DochazkaRowComponent extends React.Component<DochazkaRowComponentPr
     getOdchodComponent() {
         if (this.props.dochazkaRowModel.jeVPraci) {
             return <td className="objItem">
-                <button type="button" className="btn btn-success"
+                <button type="button" className="btn btn-sm btn-success"
                     onClick={() => this.props.dochazkaRowModel.odchodCreated()}>
                     Odchod
                     </button>
